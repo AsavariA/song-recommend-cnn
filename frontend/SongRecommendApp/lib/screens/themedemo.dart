@@ -4,11 +4,13 @@ import 'package:provider/provider.dart';
 import 'AppStateNotifier.dart';
 
 class ThemeDemo extends StatefulWidget {
+  static const routeName = './themeDemo';
   @override
   _ThemeDemoState createState() => _ThemeDemoState();
 }
 
 class _ThemeDemoState extends State<ThemeDemo> {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,9 +26,9 @@ class _ThemeDemoState extends State<ThemeDemo> {
         backgroundColor: Colors.blueGrey[400],
         actions: <Widget>[
           Switch(
-            value: Provider.of<AppStateNotifier>(context).isDarkModeOn,
+            value: Provider.of<AppStateNotifier>(context, listen: false).isDarkModeOn,
             onChanged: (boolVal){
-              Provider.of(context).updateTheme(boolVal);
+              Provider.of(context,listen: false).updateTheme(boolVal);
             },
           )
         ]

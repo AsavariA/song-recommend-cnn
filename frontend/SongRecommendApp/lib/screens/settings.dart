@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:myapp/screens/themedemo.dart';
 import 'package:myapp/widgets/settingsButton.dart';
 import './versionScreen.dart';
 
@@ -30,6 +31,7 @@ class Settings extends StatelessWidget {
             icon: Icons.auto_fix_normal,
             bgcolor: Colors.pink,
             smalltext: 'Customize your Profile',
+            onpressed: (){},
           ),
           SizedBox(height: 10.0,),
           SettingsButton(
@@ -37,6 +39,9 @@ class Settings extends StatelessWidget {
             icon: Icons.auto_awesome,
             bgcolor: Colors.orange,
             smalltext: 'Select your own theme',
+            onpressed: (){
+              Navigator.of(context).pushNamed(ThemeDemo.routeName);
+            },
           ),
           SizedBox(height: 10.0,),
           SettingsButton(
@@ -44,6 +49,7 @@ class Settings extends StatelessWidget {
             icon: Icons.android,
             bgcolor: Colors.lightBlue,
             smalltext: 'About the App',
+            onpressed: (){},
           ),
           SizedBox(height: 10.0,),
           SettingsButton(
@@ -51,6 +57,7 @@ class Settings extends StatelessWidget {
             icon: Icons.audiotrack,
             bgcolor: Colors.purple,
             smalltext: 'All your favourites at a single location',
+            onpressed: (){},
           ),
           SizedBox(height: 10.0,),
           SettingsButton(
@@ -58,6 +65,7 @@ class Settings extends StatelessWidget {
             icon: Icons.download_outlined,
             bgcolor: Colors.teal,
             smalltext: 'Your own Music',
+            onpressed: (){},
           ),
           SizedBox(height: 10.0,),
           SettingsButton(
@@ -66,7 +74,8 @@ class Settings extends StatelessWidget {
             bgcolor: Colors.cyan,
             smalltext: 'Version Info',
             onpressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) =>Version()));
+              print('version');
+              Navigator.of(context).pushNamed(Version.routeName);
             },
           ),
           SizedBox(height: 10.0,),
@@ -75,6 +84,9 @@ class Settings extends StatelessWidget {
             icon: Icons.account_circle,
             bgcolor: Colors.black,
             smalltext: 'Signout of Current Account',
+            onpressed: (){
+              print('Signout');
+            },
           ),
         ],  
       ),

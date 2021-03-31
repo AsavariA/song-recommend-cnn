@@ -24,7 +24,7 @@ class SettingsButton extends StatelessWidget {
       width:400,
       height: 80,
       child: FlatButton(
-        onPressed: (){},
+        onPressed: onpressed,
         padding: EdgeInsets.all(10.0),
         shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0),),
         color: Colors.white,

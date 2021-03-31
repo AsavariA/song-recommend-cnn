@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Version extends StatelessWidget {
+  static const routeName = "./version";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
