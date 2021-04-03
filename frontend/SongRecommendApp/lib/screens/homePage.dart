@@ -1,8 +1,11 @@
+import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:google_fonts/google_fonts.dart';
 import './settings.dart';
+
+StreamController<bool> isLightTheme = StreamController.broadcast();
 
 class HomePage extends StatefulWidget {
   static const routeName = './Homepage';
@@ -14,27 +17,33 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return StreamBuilder<bool>(
+        initialData: true,
+        stream: isLightTheme.stream,
+        builder: (context, snapshot) {
+      return MaterialApp(
+        theme: snapshot.data ? ThemeData.light() : ThemeData.dark(),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.white,
+        /*backgroundColor: Colors.white,*/
         appBar: AppBar(
-          backgroundColor: Colors.blueGrey[400],
+          backgroundColor: Colors.blueGrey[300],
           centerTitle: true,
           leading: Padding(
             padding: EdgeInsets.only(left: 25),
             child: IconButton(
               icon: Icon(
                 Icons.menu,
-                color: Colors.white,
+                color: Colors.black,
               ),
-              onPressed:(){
+              onPressed: () {
                 Navigator.of(context).pushNamed(Settings.routeName);
               },
             ),
           ),
           title: Text('MoodWiz',
-              style: GoogleFonts.alike(fontWeight: FontWeight.bold)),
+              style: GoogleFonts.alike(
+                  fontWeight: FontWeight.bold, color: Colors.black)),
           actions: [
             Padding(
               padding: const EdgeInsets.all(5.0),
@@ -51,7 +60,8 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         body: Padding(
-          padding: const EdgeInsetsDirectional.only(top: 15, start: 10, end: 10),
+          padding: const EdgeInsetsDirectional.only(
+              top: 15, start: 10, end: 10),
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -71,12 +81,12 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "TRENDING",
-                    style: GoogleFonts.average(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black
-                    )
+                      "TRENDING",
+                      style: GoogleFonts.average(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                         /* color: Colors.black*/
+                      )
                   ),
                 ),
                 SizedBox(
@@ -197,12 +207,12 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "YOUR PLAYLISTS",
-                    style: GoogleFonts.average(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black
-                    )
+                      "YOUR PLAYLISTS",
+                      style: GoogleFonts.average(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          /*color: Colors.black*/
+                      )
                   ),
                 ),
                 SizedBox(
@@ -292,7 +302,12 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 SizedBox(
-                  height: 40,
+                  height: 30,
+                ),
+                Container(
+                    height: 55,
+                    width: double.infinity,
+                    child: ThemePage(),
                 ),
                 Container(
                   height: 85,
@@ -307,27 +322,52 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         floatingActionButton: Padding(
-          padding: const EdgeInsetsDirectional.only(bottom: 35, end: 15),
-          child: Container(
-            height: 70,
-            width: 70,
-            child: FittedBox(
-              child: FloatingActionButton(
-                onPressed: () {},
-                tooltip: "Capture Picture",
-                elevation: 10,
-                child: Padding(
-                  padding: EdgeInsets.all(0),
-                  child: Icon(
-                    Icons.camera_alt,color: Colors.black,
+            padding: const EdgeInsetsDirectional.only(bottom: 35, end: 15),
+            child: Container(
+                height: 70,
+                width: 70,
+                child: FittedBox(
+                  child: FloatingActionButton(
+                    onPressed: () {},
+                    tooltip: "Capture Picture",
+                    elevation: 10,
+                    child: Padding(
+                      padding: EdgeInsets.all(0),
+                      child: Icon(
+                        Icons.camera_alt, color: Colors.black,
+                      ),
+                    ),
+                    backgroundColor: Colors.blueGrey[200],
                   ),
-                ),
-                backgroundColor: Colors.blueGrey[200],
-              ),
+                )
             )
-          )
         ),
       ),
     );
+  }
+  );
+  }
+}
+class ThemePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Center(
+            child: Row(mainAxisAlignment: MainAxisAlignment.center, children: <
+                Widget>[
+              RaisedButton(
+                  color: Colors.blueGrey[200],
+                  child: Text("Light Theme", style: TextStyle(color: Colors.black)),
+                  onPressed: () {
+                    isLightTheme.add(true);
+                  }),
+              RaisedButton(
+                  color: Colors.black,
+                  child: Text("Dark Theme", style: TextStyle(color: Colors.white)),
+                  onPressed: () {
+                    isLightTheme.add(false);
+                  }),
+            ])));
   }
 }
