@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Camera extends StatefulWidget {
   static const routeName = './Camera';
@@ -20,7 +21,7 @@ class _CameraState extends State<Camera> {
       if (pickedFile != null) {
         _image = File(pickedFile.path);
       } else {
-        print('No image selected.');
+        print('No image selected');
       }
     });
   }
@@ -28,19 +29,35 @@ class _CameraState extends State<Camera> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      /*appBar: AppBar(
+        title: Text('Image Picker'),
+      ),*/
       appBar: AppBar(
-        title: Text('Image Picker Example'),
+        title: Text('Image Picker', style: GoogleFonts.alike(
+          fontWeight: FontWeight.bold, color: Colors.black)),
+        backgroundColor: Colors.blueGrey[300],
       ),
       body: Center(
         child: _image == null
-            ? Text('No image selected.')
+            ? Text('Capture your mood to jam to your cravings!',style: GoogleFonts.alike(
+          fontWeight: FontWeight.normal, fontSize: 17))
             : Image.file(_image),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: getImage,
         tooltip: 'Pick Image',
-        child: Icon(Icons.add_a_photo),
+        elevation:10,
+        child: Padding(
+          padding: EdgeInsets.all(0),
+          child: Icon(
+            Icons.camera_alt, color: Colors.black,
+          ),
+        ),
+        backgroundColor: Colors.blueGrey[200],
       ),
     );
   }
 }
+
+
+
