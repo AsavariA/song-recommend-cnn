@@ -328,7 +328,9 @@ class _HomePageState extends State<HomePage> {
                 width: 70,
                 child: FittedBox(
                   child: FloatingActionButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(Camera.routeName);
+                    },
                     tooltip: "Capture Picture",
                     elevation: 10,
                     child: Padding(
