@@ -43,6 +43,7 @@ class MyApp extends StatelessWidget {
                 Version.routeName: (ctx) => Version(),
                 ThemeDemo.routeName: (ctx) => ThemeDemo(),
                 AppTheme.routeName: (ctx) => AppTheme(),
+                Camera.routeName: (ctx) => Camera(),
               }
 
           );
