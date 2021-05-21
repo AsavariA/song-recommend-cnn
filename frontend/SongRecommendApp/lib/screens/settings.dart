@@ -32,7 +32,6 @@ class _SettingsState extends State<Settings> {
           backgroundColor: Colors.blueGrey[300],
         ),
         body: Container(
-          /*color: Colors.blueGrey[100],*/
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -84,7 +83,6 @@ class _SettingsState extends State<Settings> {
                 smalltext: 'Version Info',
                 onpressed: () {
                   print('Version');
-                  /* Navigator.push(context, MaterialPageRoute(builder: (context) =>Version()));*/
                   Navigator.of(context).pushNamed(Version.routeName);
                 },
               ),
