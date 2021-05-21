@@ -50,17 +50,6 @@ class _SettingsState extends State<Settings> {
               ),
               SizedBox(height: 10.0,),
               SettingsButton(
-                text: 'Themes',
-                icon: Icons.auto_awesome,
-                bgcolor: Colors.orange,
-                smalltext: 'Select your own theme',
-                onpressed: () {
-                  print('themes');
-                  Navigator.of(context).pushNamed(AppTheme.routeName);
-                },
-              ),
-              SizedBox(height: 10.0,),
-              SettingsButton(
                 text: 'About',
                 icon: Icons.android,
                 bgcolor: Colors.lightBlue,
