@@ -32,7 +32,7 @@ Keras is a python-based framework used for debugging in python. It was used in t
 OpenCV is a python library majorly used for computer vision amd machine learning. In this project, we have used OpenCV for processing the images captured by the user. OpenCV,'s object detection algorithm - *Haar Cascades* is used for detecting facial features.
 
 #### *Numpy:*
-Numpy is a python library used to work with muti-dimensional arrays and matrices. OpenCV makes use of numpy to perfrom all the operations. All the OpenCV arrays structures are converted to and from Numpy arrays.
+Numpy is a python library used to work with muti-dimensional arrays and matrices. OpenCV makes use of numpy to perform all the operations. All the OpenCV array structures are converted to and from Numpy arrays.
 
 #### *Flask:*
 Flask is a micro-framework written in python.It is used to dynamically build HTML pages using Python concepts. 
