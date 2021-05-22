@@ -37,6 +37,14 @@ Numpy is a python library used to work with muti-dimensional arrays and matrices
 #### *Flask:*
 Flask is a micro-framework written in python.It is used to dynamically build HTML pages using Python concepts. 
 
+## Future Scope
+
+Till now we have made a decent frontend using Flutter and Dart for our app and we have also trained a mood recognition model using CNN and Tensorflow. Our future goals would be:
+* To create a backend for fetching the image from the camera screen and feeding it to the model for mood recognition. We have already created an API to do so but we still have to work on it to make it fully functional.
+* We are planning to use Spotify API to recommend and play songs in our app. So our goal would be to integrate the Spotify API with our ML model so that the API could recommend songs according to the mood detected by the model.
+
+So as of now we have achieved PART 1 (mood recognition) of our project and are yet to do PART 2 (recommendation system).
+
 # Screenshots
 ![swipescreen1](https://user-images.githubusercontent.com/80352794/119216890-07c3ef80-baf4-11eb-9046-5bd6aa956aaa.jpg)
 ![homepage_lt](https://user-images.githubusercontent.com/80352794/119216901-19a59280-baf4-11eb-9057-174f0524d30f.jpg)
