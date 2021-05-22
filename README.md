@@ -38,4 +38,8 @@ Numpy is a python library used to work with muti-dimensional arrays and matrices
 Flask is a micro-framework written in python.It is used to dynamically build HTML pages using Python concepts. 
 
 # Screenshots
-![Swipe screen1](C:/Users/admin/Downloads/swipescreen.jpg1)
+![swipescreen1](https://user-images.githubusercontent.com/80352794/119216890-07c3ef80-baf4-11eb-9046-5bd6aa956aaa.jpg)
+![homepage_lt](https://user-images.githubusercontent.com/80352794/119216901-19a59280-baf4-11eb-9057-174f0524d30f.jpg)
+![homepage_dt](https://user-images.githubusercontent.com/80352794/119216904-1b6f5600-baf4-11eb-82a7-22ef1d5124ee.jpg)
+![swipescreen2](https://user-images.githubusercontent.com/80352794/119216905-1c07ec80-baf4-11eb-95c6-e986b26cf80d.jpg)
+![loginpage](https://user-images.githubusercontent.com/80352794/119216907-1d391980-baf4-11eb-9129-ffd8bb60ad5b.jpg)
