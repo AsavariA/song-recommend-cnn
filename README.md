@@ -47,7 +47,7 @@ So as of now we have achieved PART 1 (mood recognition) of our project and are y
 
 ## Screenshots
 <img src="https://user-images.githubusercontent.com/80352794/119216890-07c3ef80-baf4-11eb-9046-5bd6aa956aaa.jpg" height="500"> <img src="https://user-images.githubusercontent.com/80352794/119216905-1c07ec80-baf4-11eb-95c6-e986b26cf80d.jpg" height="500">
-<img src="https://user-images.githubusercontent.com/80352794/119216907-1d391980-baf4-11eb-9129-ffd8bb60ad5b.jpg" height="500"> <img src="https://user-images.githubusercontent.com/80352794/119216901-19a59280-baf4-11eb-9057-174f0524d30f.jpg" height="500">
+<img src="https://user-images.githubusercontent.com/64465190/119223311-466aa180-bb16-11eb-85be-34f49564b2e0.jpeg" height="500"> <img src="https://user-images.githubusercontent.com/80352794/119216901-19a59280-baf4-11eb-9057-174f0524d30f.jpg" height="500">
 <img src="https://user-images.githubusercontent.com/80352794/119216904-1b6f5600-baf4-11eb-82a7-22ef1d5124ee.jpg" height="500"> <img src="https://user-images.githubusercontent.com/64465190/119222567-b2e3a180-bb12-11eb-9aef-4d0780048862.jpeg" height="500">
 <img src="https://user-images.githubusercontent.com/64465190/119222573-b8d98280-bb12-11eb-95f6-1a4e0b6b7990.jpeg" height="500">
 
