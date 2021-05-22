@@ -5,7 +5,7 @@
 2. Ananya Pawar
 3. Chaitravi Chalke
 4. Asavari Ambavane
-5. Shreyas Wasnik
+5. Shreyash Wasnik
 6. Pratam Jain
 7. Surabhi Chandane
 
